@@ -74,3 +74,13 @@ Run the following command:
 If you want to run Docker container as a daemon, run:
 
 `docker-compose up -d`
+
+Login to Administration UI. Default account: kaa/kaa123
+
+`http://<IP_ADDRESS>:8080`
+
+Change SMTP mail server:
+
+`http://<IP_ADDRESS>:8080/kaaAdmin/#mailProps:`
+
+Next, create tenant and user.
