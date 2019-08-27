@@ -21,11 +21,11 @@ To download Kaa repository, run the command below:
 
 `git clone git@github.com:datts68/kaa-docker.git`
 
-To build Kaa node Debian/RPM packages, change the current directory after cloning.
+To build Kaa node Debian/RPM packages, change the current directory after cloning:
 
 `cd kaa`
 
-And run the following command.
+And run the following command:
   - Debian: `mvn -P compile-gwt,mongo-dao,mariadb-dao clean install verify`
   - RPM: `mvn -P compile-gwt,mongo-dao,mariadb-dao,build-rpm clean install verify`
 
@@ -35,7 +35,7 @@ For the mvn command, the build number and git commit variables are set to emulat
 
 Add the `-DskipTests` suffix to the mvn command to skip execution of tests and speed up the build process.
 
-You can use the following command to browse the Kaa node build artifacts in case of successful build.
+You can use the following command to browse the Kaa node build artifacts in case of successful build:
   - Debian: `ls server/node/target/kaa-node.deb`
   - RPM: `ls server/node/target/rpm/kaa-node/RPMS/noarch/kaa-node*.rpm`
 
