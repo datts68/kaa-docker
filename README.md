@@ -19,11 +19,11 @@ https://kaaproject.github.io/kaa/docs/v0.10.0/Administration-guide/System-instal
 You can use any Git client to fetch Kaa source code from the repository.
 To download Kaa repository, run the command below:
 
-`git clone git@github.com:datts68/kaa-docker.git`
+    git clone git@github.com:datts68/kaa-docker.git
 
 To build Kaa node Debian/RPM packages, change the current directory after cloning:
 
-`cd kaa`
+    cd kaa
 
 And run the following command:
   - Debian: `mvn -P compile-gwt,mongo-dao,mariadb-dao clean install verify`
@@ -44,11 +44,11 @@ Use kaa-node.deb located in server/node/target/, or download Kaa debian package 
 
 Run the following command from the server/containers/docker directory:
 
-`docker build --build-arg setupfile=kaa-node.deb -t kaa-node:0.10.0 .`
+    docker build --build-arg setupfile=kaa-node.deb -t kaa-node:0.10.0 .
 
 Alternatively, you can run the following command:
 
-`build.sh`
+    build.sh
 
 ## Single node installation
 https://kaaproject.github.io/kaa/docs/v0.10.0/Administration-guide/System-installation/Docker-deployment/
@@ -59,7 +59,7 @@ Get your public host by specifying the TRANSPORT_PUBLIC_INTERFACE parameter in t
 
 Open any directory in the docker-compose-1-node directory:
 
-`cd docker-compose-1-node/$SQL-NoSQL/`
+    cd docker-compose-1-node/$SQL-NoSQL/
 
 The following SQL-NoSQL databases are available:
   - `mariadb-mongodb`
@@ -69,18 +69,18 @@ The following SQL-NoSQL databases are available:
 
 Run the following command:
 
-`docker-compose up`
+    docker-compose up
 
 If you want to run Docker container as a daemon, run:
 
-`docker-compose up -d`
+    docker-compose up -d
 
 Login to Administration UI. Default account: kaa/kaa123
 
-`http://<IP_ADDRESS>:8080`
+    http://<IP_ADDRESS>:8080
 
 Change SMTP mail server:
 
-`http://<IP_ADDRESS>:8080/kaaAdmin/#mailProps:`
+    http://<IP_ADDRESS>:8080/kaaAdmin/#mailProps:
 
 Next, create tenant and user.
